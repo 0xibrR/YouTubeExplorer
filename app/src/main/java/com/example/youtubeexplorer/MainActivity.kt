@@ -1,5 +1,6 @@
 package com.example.youtubeexplorer
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.Menu
@@ -60,6 +61,11 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.menu_refresh -> {
                     recreate()
+                    true
+                }
+
+                R.id.menu_settings ->{
+                    startActivity(Intent(this, SettingsActivity::class.java))
                     true
                 }
 
